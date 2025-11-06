@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import axios from 'axios'
+import apiClient from '../config/api.js'
 import { motion } from 'framer-motion'
 import { Search, MapPin, Thermometer, Droplets, Wind, Sunrise, Sunset, Gauge, Eye } from 'lucide-react'
 
@@ -28,7 +28,7 @@ export default function WeatherModule() {
     setLoading(true)
     setError('')
     try {
-      const res = await axios.get(`/api/weather`, { params: { city } })
+      const res = await apiClient.get(`/api/weather`, { params: { city } })
       setData(res.data)
     } catch (e) {
       const msg = e?.response?.data?.error || 'Failed to fetch weather'

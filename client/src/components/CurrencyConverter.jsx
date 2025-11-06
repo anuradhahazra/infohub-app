@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import axios from 'axios'
+import apiClient from '../config/api.js'
 import { motion } from 'framer-motion'
 import { ArrowRightLeft, TrendingUp, DollarSign, Euro } from 'lucide-react'
 
@@ -31,7 +31,7 @@ export default function CurrencyConverter() {
     setLoading(true)
     setError('')
     try {
-      const res = await axios.get('/api/convert', {
+      const res = await apiClient.get('/api/convert', {
         params: { from: 'INR', to: target, amount: parsedAmount },
       })
       setResult(res.data)

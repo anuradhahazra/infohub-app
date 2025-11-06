@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios'
+import apiClient from '../config/api.js'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Quote, RefreshCw, Sparkles } from 'lucide-react'
 
@@ -12,7 +12,7 @@ export default function QuoteGenerator() {
     setLoading(true)
     setError('')
     try {
-      const res = await axios.get('/api/quote')
+      const res = await apiClient.get('/api/quote')
       setQuote(res.data)
     } catch (e) {
       const msg = e?.response?.data?.error || 'Failed to fetch quote'

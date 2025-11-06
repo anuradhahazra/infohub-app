@@ -1,0 +1,28 @@
+services:
+  # Backend Service
+  - type: web
+    name: infohub-backend
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: OPENWEATHER_API_KEY
+        sync: false  # You'll set this manually in Render dashboard
+    
+  # Frontend Service
+  - type: web
+    name: infohub-frontend
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          name: infohub-backend
+          type: web
+          property: host
+
