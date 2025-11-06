@@ -1,9 +1,34 @@
+# Dependencies
 node_modules/
+package-lock.json
+
+# Build outputs
 dist/
-.DS_Store
-*.log
-.env
+build/
 client/.vite
 client/.vite-cache
+client/dist
+
+# Environment variables (NEVER commit these!)
+.env
+.env.local
+.env.production
+.env.development
+server/.env
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+.cache
 
 
