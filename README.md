@@ -25,7 +25,6 @@ server/   # Express + node.js backend
 ```
 OPENWEATHER_API_KEY=YOUR_KEY
 PORT=5000
-NODE_ENV=development
 
 ```
 2. Install and run:
