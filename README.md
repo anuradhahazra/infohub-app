@@ -45,7 +45,7 @@ npm run dev
 The frontend expects the backend on `http://localhost:5000` and uses relative `/api/*` calls.
 
 ## Deployment
-- You can deploy the server to Render/Railway/Heroku and the client to Vercel/Netlify.
+- You can deploy the server to Render/Railway/Heroku and the client to Render/Vercel/Netlify.
 - Ensure environment variables are configured in the backend host.
 - Update the client to use the deployed API base URL if serving from another origin, or configure a reverse proxy.
 
