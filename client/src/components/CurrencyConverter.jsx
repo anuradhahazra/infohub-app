@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
 import apiClient from '../config/api.js'
 import { motion } from 'framer-motion'
-import { ArrowRightLeft, TrendingUp, DollarSign, Euro } from 'lucide-react'
+import { ArrowRightLeft, TrendingUp, DollarSign, Euro, JapaneseYen} from 'lucide-react'
 
 const TARGETS = [
   { code: 'USD', label: 'US Dollar', icon: DollarSign, color: 'from-green-500 to-emerald-600' },
   { code: 'EUR', label: 'Euro', icon: Euro, color: 'from-blue-500 to-cyan-600' },
+  { code: 'JPY', label: 'Japan', icon: JapaneseYen, color: 'from-purple-500 to-violet-600' }
 ]
 
 export default function CurrencyConverter() {
