@@ -6,7 +6,7 @@ import { ArrowRightLeft, TrendingUp, DollarSign, Euro, JapaneseYen} from 'lucide
 const TARGETS = [
   { code: 'USD', label: 'US Dollar', icon: DollarSign, color: 'from-green-500 to-emerald-600' },
   { code: 'EUR', label: 'Euro', icon: Euro, color: 'from-blue-500 to-cyan-600' },
-  { code: 'JPY', label: 'Japan', icon: JapaneseYen, color: 'from-purple-500 to-violet-600' }
+  { code: 'JPY', label: 'Yen', icon: JapaneseYen, color: 'from-purple-500 to-violet-600' }
 ]
 
 export default function CurrencyConverter() {
